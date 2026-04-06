@@ -3,17 +3,15 @@ import java.util.*;
 class TrainManagement {
     public static void main(String[] args) {
 
-        List<String> passengerBogies = new ArrayList<>();
+        Set<String> bogies = new HashSet<>();
 
-        passengerBogies.add("Sleeper");
-        passengerBogies.add("AC Chair");
-        passengerBogies.add("First Class");
+        bogies.add("BG101");
+        bogies.add("BG102");
+        bogies.add("BG103");
+        bogies.add("BG104");
+        bogies.add("BG101");
+        bogies.add("BG102");
 
-        System.out.println(passengerBogies);
-
-        passengerBogies.remove("AC Chair");
-        System.out.println(passengerBogies);
-
-        System.out.println(passengerBogies.contains("Sleeper"));
+        System.out.println(bogies);
     }
 }
