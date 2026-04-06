@@ -1,16 +1,31 @@
 import java.util.*;
 
 class TrainManagement {
+
+    static class Bogie {
+        String name;
+        int capacity;
+
+        Bogie(String n, int c) {
+            name = n;
+            capacity = c;
+        }
+
+        public String toString() {
+            return name + ":" + capacity;
+        }
+    }
+
     public static void main(String[] args) {
 
-        Map<String, Integer> map = new HashMap<>();
+        List<Bogie> list = new ArrayList<>();
 
-        map.put("Sleeper", 72);
-        map.put("AC Chair", 56);
-        map.put("First Class", 24);
+        list.add(new Bogie("Sleeper", 72));
+        list.add(new Bogie("AC Chair", 56));
+        list.add(new Bogie("First Class", 24));
 
-        for (Map.Entry<String, Integer> e : map.entrySet()) {
-            System.out.println(e.getKey() + " -> " + e.getValue());
-        }
+        list.sort(Comparator.comparingInt(b -> b.capacity));
+
+        System.out.println(list);
     }
 }
