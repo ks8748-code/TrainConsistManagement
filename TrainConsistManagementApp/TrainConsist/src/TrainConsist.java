@@ -3,15 +3,19 @@ import java.util.*;
 class TrainManagement {
     public static void main(String[] args) {
 
-        Set<String> bogies = new HashSet<>();
+        LinkedList<String> train = new LinkedList<>();
 
-        bogies.add("BG101");
-        bogies.add("BG102");
-        bogies.add("BG103");
-        bogies.add("BG104");
-        bogies.add("BG101");
-        bogies.add("BG102");
+        train.add("Engine");
+        train.add("Sleeper");
+        train.add("AC");
+        train.add("Cargo");
+        train.add("Guard");
 
-        System.out.println(bogies);
+        train.add(2, "Pantry");
+
+        train.removeFirst();
+        train.removeLast();
+
+        System.out.println(train);
     }
 }
